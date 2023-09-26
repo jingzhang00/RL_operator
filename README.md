@@ -1,9 +1,8 @@
 # Hierarchical Reinforcement Learning based on Planning Operators
 ## Introduction
 
-**Paper website:** https://arxiv.org/pdf/2309.14237.pdf
-
-**Author:** Jing Zhang, Karinne Ramirez-Amaro
+**Paper website:** https://arxiv.org/abs/2309.14237
+**Authors:** Jing Zhang, Karinne Ramirez-Amaro
 
 ## Framework
 <img src="framework.jpg" height="75%" width="75%"/>
