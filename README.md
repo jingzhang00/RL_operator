@@ -10,7 +10,7 @@
 
 ## Setup
 ```commandline
-git@github.com:Bleuoutremer/RL_operator.git
+git@github.com:jingzhang00/RL_operator.git
 ```
 ```commandline
 pip install -r requirements.txt
