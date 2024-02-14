@@ -4,6 +4,6 @@ torch~=2.0.1
 gym~=0.26.0
 pybullet~=3.2.5
 transforms3d~=0.4.1
-pillow~=10.0.0
+pillow~=10.2.0
 liegroups~=1.1.0
 tensorboard~=2.13.0
