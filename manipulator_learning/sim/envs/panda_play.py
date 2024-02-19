@@ -169,21 +169,18 @@ class PandaPlayGeneric(ManipulatorEnv):
                     open_or_close = True if action[-1] > 0 else 0
                 arm_vel_norm = np.linalg.norm(arm_vel)
                 suc_cur_timestep = bool(reach and open_or_close and arm_vel_norm < .08)
-                # suc_cur_timestep = bool(reach and open_or_close and arm_vel_norm < .25)  # for single traj shared data in lfgp
 
             elif main_task == 'stack':
                 suc_cur_timestep = stack_rew.stack_sparse_eval(pbc, task_obj_pb_ids, table_pb_id, task_obj_poss)
 
             elif main_task == 'lift':
                 suc_height = .04
-                # suc_height = .03 # for single traj shared data in lfgp
                 for obj in task_obj_indices:
                     suc.append(lift_rew.lift_sparse_multiple(task_obj_poss[obj], suc_height, bottom_height=table_height))
                 suc_cur_timestep = any(suc)
 
             elif main_task == 'reach':
                 thresh = .02
-                # thresh = .03  # for single traj shared data in lfgp
                 for obj in task_obj_indices:
                     suc.append(reach_rew.reach_sparse(task_obj_poss[obj], ee_pos, thresh))
                 suc_cur_timestep = any(suc)
