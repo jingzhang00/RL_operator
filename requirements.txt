@@ -1,6 +1,6 @@
 numpy~=1.23.5
 future~=0.18.3
-torch~=2.0.1
+torch~=2.2.1
 gym~=0.26.0
 pybullet~=3.2.5
 transforms3d~=0.4.1

@@ -51,7 +51,7 @@ parser.add_argument('--scheduler', choices=["UScheduler", "QTableScheduler", "Co
 parser.add_argument('--eval_freq', type=int, default=20000,
                     help="The frequency of evaluating the performance of the current policy")
 parser.add_argument('--num_evals_per_task', type=int, default=20, help="Number of evaluation episodes per task")
-parser.add_argument('--gpu_buffer', action='store_true', default=False, help="Store buffers on gpu.")
+parser.add_argument('--gpu_buffer', action='store_true', default=True, help="Store buffers on gpu.")
 args = parser.parse_args()
 
 seed = args.seed
@@ -285,7 +285,8 @@ experiment_setting = {
     # SAC
     c.ACCUM_NUM_GRAD: 1,
     c.BATCH_SIZE: 256,
-    c.BUFFER_WARMUP: 10000,
+    # c.BUFFER_WARMUP: 10000,
+    c.BUFFER_WARMUP: 1,
     c.GAMMA: 0.89,
     c.LEARN_ALPHA: True,
     c.MAX_GRAD_NORM: 10,
